@@ -14,15 +14,14 @@ const center = {
 function MyComponent() {
     return (
         <LoadScript
-            googleMapsApiKey="YOUR_API_KEY"
+            googleMapsApiKey={import.meta.env.REACT_APP_GOOGLE_API_KEY}
         >
             <GoogleMap
                 mapContainerStyle={containerStyle}
                 center={center}
                 zoom={10}
             >
-                { /* Child components, such as markers, info windows, etc. */}
-                <></>
+
             </GoogleMap>
         </LoadScript>
     )
